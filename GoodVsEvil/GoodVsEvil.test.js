@@ -1,6 +1,6 @@
 const goodVsEvil = require("./index");
 
-describe("Inflight Entertainment", () => {
+describe("Good vs Evil", () => {
 
   test("Evil wins", () => {
     expect(goodVsEvil('1 1 1 1 1 1', '1 1 1 1 1 1 1')).toEqual('Battle Result: Evil eradicates all trace of Good')
