@@ -7,7 +7,7 @@ describe("Inflight Entertainment", () => {
   })
 
   test("Good wins", () => {
-    expect(goodVsEvil('0 0 0 0 0 10', '0 1 1 1 1 0 0')).toEqual('Battle Result: Evil eradicates all trace of Good')
+    expect(goodVsEvil('0 0 0 0 0 1 0', '0 1 1 1 1 0 0')).toEqual('Battle Result: Evil eradicates all trace of Good')
   })
 
   test("No one wins", () => {

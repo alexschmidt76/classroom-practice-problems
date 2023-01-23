@@ -17,7 +17,7 @@
     "url": "https://github.com/Eldoza/classroom-practice-problems/issues"
   },
   "homepage": "https://github.com/Eldoza/classroom-practice-problems#readme",
-  "dependencies": {
-    "jest": "^28.1.2"
+  "devDependencies": {
+    "jest": "^29.3.1"
   }
 }

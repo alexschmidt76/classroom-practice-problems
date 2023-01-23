@@ -1,6 +1,7 @@
 // My cake shop is so popular, I'm adding some tables and hiring wait staff so folks can have a cute sit-down cake-eating experience.
 
-// I have two registers: one for take-out orders, and the other for the other folks eating inside the cafe. All the customer orders get combined into one list for the kitchen, where they should be handled first-come, first-served.
+// I have two registers: one for take-out orders, and the other for the other folks eating inside the cafe. All the customer orders get combined into one 
+// list for the kitchen, where they should be handled first-come, first-served.
 
 // Recently, some customers have been complaining that people who placed orders after them are getting their food first. Yikes—that's not good for business!
 
@@ -30,7 +31,19 @@
 // Note: Order numbers are arbitrary. They do not have to be in increasing order.
 
 function isFirstComeFirstServed(takeOutOrders, dineInOrders, servedOrders) {
-  return null
+  let servedOutOrders = [], servedInOrders = []
+  for (let i = 0; i < servedOrders.length; i++) {
+    if (takeOutOrders.find(e => e === servedOrders[i]) !== undefined) {
+      servedOutOrders.push(servedOrders[i])
+    } else {
+      servedInOrders.push(servedOrders[i])
+    }
+  }
+  if (JSON.stringify(takeOutOrders) === JSON.stringify(servedOutOrders) && JSON.stringify(dineInOrders) === JSON.stringify(servedInOrders)) {
+    return true
+  } else {
+    return false
+  }
 }
 
 module.exports = isFirstComeFirstServed;

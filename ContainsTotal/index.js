@@ -10,8 +10,14 @@
 // containsTotal([1,2,1], 2) => true (1 + 1 = 2)
 
 const containsTotal = (numArr, target) => {
-  return null
+  for (let i = 0; i < numArr.length - 1; i++) {
+    for (let j = i + 1; j < numArr.length; j++) {
+      if (numArr[i] + numArr[j] === target) {
+        return true
+      }
+    }
+  }
+  return false
 };
-
 
 module.exports = containsTotal;
